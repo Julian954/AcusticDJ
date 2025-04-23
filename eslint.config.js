@@ -1,13 +1,14 @@
-const js = require('@eslint/js');
+import js from '@eslint/js';
 
-module.exports = [
+export default [
 	js.configs.recommended,
 	{
 		languageOptions: {
 			ecmaVersion: 'latest',
 		},
 		rules: {
-			'arrow-spacing': ['warn', { before: true, after: true }],
+
+            'arrow-spacing': ['warn', { before: true, after: true }],
 			'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
 			'comma-dangle': ['error', 'always-multiline'],
 			'comma-spacing': 'error',
@@ -24,26 +25,26 @@ module.exports = [
 			'no-floating-decimal': 'error',
 			'no-inline-comments': 'error',
 			'no-lonely-if': 'error',
-			//'no-multi-spaces': 'error',
-			//'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1, maxBOF: 0 }],
+			'no-multi-spaces': 'error',
+			'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1, maxBOF: 0 }],
 			'no-shadow': ['error', { allow: ['err', 'resolve', 'reject'] }],
-			//'no-trailing-spaces': ['error'],
+			'no-trailing-spaces': ['error'],
 			'no-var': 'error',
 			'no-undef': 'off',
 			'object-curly-spacing': ['error', 'always'],
 			'prefer-const': 'error',
 			quotes: ['error', 'single'],
 			semi: ['error', 'always'],
-			// 'space-before-blocks': 'error',
-			// 'space-before-function-paren': ['error', {
-			// 	anonymous: 'never',
-			// 	named: 'never',
-			// 	asyncArrow: 'always',
-			// }],
-			// 'space-in-parens': 'error',
-			// 'space-infix-ops': 'error',
-			// 'space-unary-ops': 'error',
-			// 'spaced-comment': 'error',
+			'space-before-blocks': 'error',
+			'space-before-function-paren': ['error', {
+				anonymous: 'never',
+				named: 'never',
+				asyncArrow: 'always',
+			}],
+			'space-in-parens': 'error',
+			'space-infix-ops': 'error',
+			'space-unary-ops': 'error',
+			'spaced-comment': 'error',
 			yoda: 'error',
 		},
 	},
